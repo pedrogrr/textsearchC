@@ -2,13 +2,13 @@
 
 public class Search
 {
-    public Search(string word, string[] ArrayFile)
+    public Search(string? word, string[]? arrayFile)
     {
         word = Word;
         ArrayFile = ArrayFile;
     }
-    public string Word { get; set; }
-    public string ArrayFile { get; set; }
+    public string? Word { get; set; }
+    public string? ArrayFile { get; set; }
 
     public string[] MakeSearch(string Word, string[] ArrayFile)
     {

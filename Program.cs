@@ -9,24 +9,30 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Enter directory:");
-        String p_dir;
-        p_dir = Console.ReadLine();
+        String? p_dir;
+        if (args.Length > 0 ) { p_dir = args[0]; }
+        else
+        {
+            Console.WriteLine("Enter directory:");
+            p_dir = Console.ReadLine();
+        }
 
 
-        String p_word = "";
+        String? p_word = "";
 
 
-        string v_path = AppDomain.CurrentDomain.BaseDirectory;
-        string v_searchword = "exit";
+        string? v_path = AppDomain.CurrentDomain.BaseDirectory;
+        string? v_searchword = "exit";
 
         if (p_dir != "") { v_path = @p_dir; };
-        Directorio dir = new Directorio(v_path);
+        Directorio? dir = new Directorio(v_path);
 
-        Files files = new Files(dir);
-        string[] v_ArrayFile = files.LoadFiles(dir.path);
+        Files? files = new Files(dir);
+        string[]? v_ArrayFile = files.LoadFiles(dir.path);
 
         Console.WriteLine("{0} files in {1}", files.numFiles, dir.path);
+
+        if (files.numFiles==0) { return; }
         
         Search search = new Search(p_word, v_ArrayFile);
 

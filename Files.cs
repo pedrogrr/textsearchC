@@ -8,9 +8,9 @@ public class Files
         Directorio = directorio;
     }
     
-    public Directorio Directorio { get; set; }
-    public string[] ArrayFile;
-    public string[] FileNames;
+    public Directorio? Directorio { get; set; }
+    public string[]? ArrayFile;
+    public string[]? FileNames;
 
     public int numFiles;
     public string[] LoadFiles(string Directorio)

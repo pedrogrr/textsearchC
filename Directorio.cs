@@ -7,7 +7,7 @@ public class Directorio
         path = Path;
         //Console.WriteLine("path recibido {0}", path);
     }
-    public string path { get; set; }
+    public string? path { get; set; }
     
 
 }
