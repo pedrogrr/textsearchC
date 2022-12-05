@@ -1,0 +1,5 @@
+C:\Users\privero2\source\repos\TextSearch\Releases\TextSearch.exe
+C:\Users\privero2\source\repos\TextSearch\Releases\TextSearch.dll
+C:\Users\privero2\source\repos\TextSearch\Releases\TextSearch.deps.json
+C:\Users\privero2\source\repos\TextSearch\Releases\TextSearch.runtimeconfig.json
+C:\Users\privero2\source\repos\TextSearch\Releases\TextSearch.pdb
