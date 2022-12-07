@@ -1,4 +1,6 @@
-﻿namespace TextSearch;
+﻿using Microsoft.VisualBasic;
+
+namespace TextSearch;
 
 public class Search
 {
@@ -21,7 +23,9 @@ public class Search
 
             //Convert the string into an array of words (is like using stopwords)
             string[] v_ArrayFile = text.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',', '-' }, StringSplitOptions.RemoveEmptyEntries);
-
+            
+            int linea = Strings.InStr(text, ".txt");
+            string filename = text.Substring(0, linea+4);
             // Create the query.  Use the InvariantCultureIgnoreCase comparision to match "data" and "Data"
             var matchQuery = from word in v_ArrayFile
                              where word.Equals(searchTerm, StringComparison.InvariantCultureIgnoreCase)
@@ -31,7 +35,9 @@ public class Search
             int wordCount = matchQuery.Count();
 
             //Console.WriteLine("{0}: {1} occurrences(s) of the search term \"{2}\" were found.", files[loop], wordCount, searchTerm);
-            result.Add(wordCount + " occurrences(s) of " + searchTerm + " in " + ArrayFile[loop]);
+            //result.Add(wordCount + " occurrences(s) of " + searchTerm + " in " + ArrayFile[loop]);
+            //imprimo unicamente el nombre del fichero
+            result.Add(wordCount + " occurrences(s) of " + searchTerm + " in " + filename);
             loop++;
 
         }
